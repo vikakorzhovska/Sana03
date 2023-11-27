@@ -8,6 +8,7 @@ count = int.Parse(Console.ReadLine());
 Random random = new Random();
 int[] arr = new int[count];
 int sum = 0;
+int min = arr[0];
 for (int i = 0; i < arr.Length; i++)
 {
     arr[i] = random.Next(-100, 101);
@@ -16,5 +17,10 @@ for (int i = 0; i < arr.Length; i++)
     {
         sum += arr[i];
     }
+    if(min > arr[i])
+    {
+        min = arr[i];
+    }
 }
 Console.WriteLine($"\nСума від'ємних елементів масиву: {sum}");
+Console.WriteLine($"\nМінімальний елемент масиву: {min}");
