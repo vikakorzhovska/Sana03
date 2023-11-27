@@ -12,6 +12,7 @@ int min = arr[0];
 int max = arr[0];
 int maxindex = 0;
 int maxmod = arr[0];
+int sum1 = 0;
 for (int i = 0; i < arr.Length; i++)
 {
     arr[i] = random.Next(-100, 101);
@@ -33,8 +34,13 @@ for (int i = 0; i < arr.Length; i++)
     {
         maxmod = arr[i];
     }
+    if (arr[i] >= 0)
+    {
+        sum1 += i;
+    }
 }
 Console.WriteLine($"\nСума від'ємних елементів масиву: {sum}");
 Console.WriteLine($"\nМінімальний елемент масиву: {min}"); 
 Console.WriteLine($"\nНомер максимального елементу: {maxindex}");
 Console.WriteLine($"\nМаксимальний за модулем елемент масиву: {min}");
+Console.WriteLine($"\nСума індексів додатних елементів масиву: {sum1}");
